@@ -2,6 +2,8 @@
 
 Algorand Puya RSA RFC8017 RSASSA-PKCS1-V1.5-VERIFY function implementation. Intended to allow on-chain verification of RSA signatures seen in practice (e.g. JWT signatures), compliant with the Public Key Cryptography Standard v1.5. See [RFC Section 8.2.2](https://datatracker.ietf.org/doc/html/rfc8017#section-8.2.2).
 
+⚠️ Not officially production ready until documentation updated to indicate otherwise. Use at your own risk.
+
 ## Features
 
 - Supports up to `1024 bytes` (8192 bits) long modulus
