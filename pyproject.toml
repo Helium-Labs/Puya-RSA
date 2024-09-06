@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "puya-rsa"
+version = "0.1.0"
+description = "Algorand Puya RSA Signature Verification: RFC8017 RSASSA-PKCS1-V1.5-VERIFY function implementation"
+authors = ["Winton Nathan-Roberts <winton.nathan.roberts@gmail.com>"]
+readme = "README.md"
+license = "GNU GPLv3"
+repository = "https://github.com/Helium-Labs/Puya-RSA"
+packages = [{include = "puya_rsa"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+py-algorand-sdk = "^2.6.1"
+algorand-python = "^2.0.1"
+puya-bignumber = "^0.3.2"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+algorand-python-testing = "^0.4.1"
+pycryptodome = "^3.20.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
