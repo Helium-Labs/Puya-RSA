@@ -6,7 +6,7 @@ authors = ["Winton Nathan-Roberts <winton.nathan.roberts@gmail.com>"]
 readme = "README.md"
 license = "GNU GPLv3"
 repository = "https://github.com/Helium-Labs/Puya-RSA"
-packages = [{include = "puya_rsa"}]
+packages = [{include = "puya_rsa"}, {include = "puya_rsa/py.typed"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
