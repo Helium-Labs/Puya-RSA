@@ -413,13 +413,13 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "puya-bignumber"
-version = "0.3.3"
+version = "0.3.7"
 description = "Math Library for big numbers in Puya for Algorand"
 optional = false
 python-versions = "<4.0,>=3.12"
 files = [
-    {file = "puya_bignumber-0.3.3-py3-none-any.whl", hash = "sha256:7ed57db29bce584f7e0009b34020bbedbcc6cf4db11f8bb15399b7cf39ab48cd"},
-    {file = "puya_bignumber-0.3.3.tar.gz", hash = "sha256:c54a10766f154c441cc4cb8d18a3b4a9167480024f96ec838338bbfee945e416"},
+    {file = "puya_bignumber-0.3.7-py3-none-any.whl", hash = "sha256:e74745dbabf1f6cd410365096570a3859208afe93397097feb15860e486ddf48"},
+    {file = "puya_bignumber-0.3.7.tar.gz", hash = "sha256:6a2bb59e1b3348acb3adbc65205425dda79d2257157a7f5143b958cf3f591331"},
 ]
 
 [package.dependencies]
@@ -595,4 +595,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "2779890c3da4e428502be9925ee4cefb38153635410ab3bc3bf1b60841f65685"
+content-hash = "f886082d11301544af067ba0e9f60c18d2cdeddb77147575566790b246b3de25"
