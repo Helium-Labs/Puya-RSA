@@ -40,6 +40,25 @@ files = [
 ]
 
 [[package]]
+name = "attrs"
+version = "23.2.0"
+description = "Classes Without Boilerplate"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1"},
+    {file = "attrs-23.2.0.tar.gz", hash = "sha256:935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30"},
+]
+
+[package.extras]
+cov = ["attrs[tests]", "coverage[toml] (>=5.3)"]
+dev = ["attrs[tests]", "pre-commit"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
+tests = ["attrs[tests-no-zope]", "zope-interface"]
+tests-mypy = ["mypy (>=1.6)", "pytest-mypy-plugins"]
+tests-no-zope = ["attrs[tests-mypy]", "cloudpickle", "hypothesis", "pympler", "pytest (>=4.3.0)", "pytest-xdist[psutil]"]
+
+[[package]]
 name = "black"
 version = "24.8.0"
 description = "The uncompromising code formatter."
@@ -82,6 +101,30 @@ colorama = ["colorama (>=0.4.3)"]
 d = ["aiohttp (>=3.7.4)", "aiohttp (>=3.7.4,!=3.9.0)"]
 jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
+
+[[package]]
+name = "cattrs"
+version = "24.1.1"
+description = "Composable complex class support for attrs and dataclasses."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "cattrs-24.1.1-py3-none-any.whl", hash = "sha256:ec8ce8fdc725de9d07547cd616f968670687c6fa7a2e263b088370c46d834d97"},
+    {file = "cattrs-24.1.1.tar.gz", hash = "sha256:16e94a13f9aaf6438bd5be5df521e072b1b00481b4cf807bcb1acbd49f814c08"},
+]
+
+[package.dependencies]
+attrs = ">=23.1.0"
+
+[package.extras]
+bson = ["pymongo (>=4.4.0)"]
+cbor2 = ["cbor2 (>=5.4.6)"]
+msgpack = ["msgpack (>=1.0.5)"]
+msgspec = ["msgspec (>=0.18.5)"]
+orjson = ["orjson (>=3.9.2)"]
+pyyaml = ["pyyaml (>=6.0)"]
+tomlkit = ["tomlkit (>=0.11.8)"]
+ujson = ["ujson (>=5.7.0)"]
 
 [[package]]
 name = "cffi"
@@ -254,6 +297,17 @@ files = [
 ]
 
 [[package]]
+name = "docstring-parser"
+version = "0.16"
+description = "Parse Python docstrings in reST, Google and Numpydoc format"
+optional = false
+python-versions = ">=3.6,<4.0"
+files = [
+    {file = "docstring_parser-0.16-py3-none-any.whl", hash = "sha256:bf0a1387354d3691d102edef7ec124f219ef639982d096e26e3b60aeffa90637"},
+    {file = "docstring_parser-0.16.tar.gz", hash = "sha256:538beabd0af1e2db0146b6bd3caa526c35a34d61af9fd2887f3a8a27a739aa6e"},
+]
+
+[[package]]
 name = "ecdsa"
 version = "0.19.0"
 description = "ECDSA cryptographic signature library (pure python)"
@@ -270,6 +324,17 @@ six = ">=1.9.0"
 [package.extras]
 gmpy = ["gmpy"]
 gmpy2 = ["gmpy2"]
+
+[[package]]
+name = "immutabledict"
+version = "4.2.0"
+description = "Immutable wrapper around dictionaries (a fork of frozendict)"
+optional = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "immutabledict-4.2.0-py3-none-any.whl", hash = "sha256:d728b2c2410d698d95e6200237feb50a695584d20289ad3379a439aa3d90baba"},
+    {file = "immutabledict-4.2.0.tar.gz", hash = "sha256:e003fd81aad2377a5a758bf7e1086cf3b70b63e9a5cc2f46bce8d0a2b4727c5f"},
+]
 
 [[package]]
 name = "iniconfig"
@@ -421,18 +486,41 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "puya-bignumber"
-version = "0.3.7"
+version = "0.3.8"
 description = "Math Library for big numbers in Puya for Algorand"
 optional = false
 python-versions = "<4.0,>=3.12"
 files = [
-    {file = "puya_bignumber-0.3.7-py3-none-any.whl", hash = "sha256:e74745dbabf1f6cd410365096570a3859208afe93397097feb15860e486ddf48"},
-    {file = "puya_bignumber-0.3.7.tar.gz", hash = "sha256:6a2bb59e1b3348acb3adbc65205425dda79d2257157a7f5143b958cf3f591331"},
+    {file = "puya_bignumber-0.3.8-py3-none-any.whl", hash = "sha256:8c06e14ccd62fd587c1888ecf9029fa881521810f1395394804a6af2016bb8ff"},
+    {file = "puya_bignumber-0.3.8.tar.gz", hash = "sha256:0ae3ee9ba288ef3ab2b2c9ae502756d51eb0305df7a64fdc9554a29c11db6501"},
 ]
 
 [package.dependencies]
 algorand-python = ">=2.0.1,<3.0.0"
+puyapy = ">=3.1.0,<4.0.0"
 py-algorand-sdk = ">=2.6.1,<3.0.0"
+
+[[package]]
+name = "puyapy"
+version = "3.1.0"
+description = "An optimising compiler for Algorand Python"
+optional = false
+python-versions = "<4.0,>=3.12"
+files = [
+    {file = "puyapy-3.1.0-py3-none-any.whl", hash = "sha256:e21a1ab6fcd5eb294bf9db8880ca9d90051a3b468ad1eb92fdc787ff36739418"},
+]
+
+[package.dependencies]
+attrs = ">=23.2.0,<24.0.0"
+cattrs = ">=24.1,<25.0"
+colorama = {version = ">=0.4.6,<0.5.0", markers = "sys_platform == \"win32\""}
+docstring-parser = ">=0.14.1"
+immutabledict = ">=4.2.0,<5.0.0"
+mypy_extensions = ">=1.0.0,<2.0.0"
+packaging = ">=24.0,<25.0"
+pycryptodomex = ">=3.6.0,<4"
+structlog = ">=24.1.0,<25.0.0"
+typing-extensions = ">=4.11.0,<5.0.0"
 
 [[package]]
 name = "py-algorand-sdk"
@@ -600,7 +688,35 @@ files = [
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 
+[[package]]
+name = "structlog"
+version = "24.4.0"
+description = "Structured Logging for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "structlog-24.4.0-py3-none-any.whl", hash = "sha256:597f61e80a91cc0749a9fd2a098ed76715a1c8a01f73e336b746504d1aad7610"},
+    {file = "structlog-24.4.0.tar.gz", hash = "sha256:b27bfecede327a6d2da5fbc96bd859f114ecc398a6389d664f62085ee7ae6fc4"},
+]
+
+[package.extras]
+dev = ["freezegun (>=0.2.8)", "mypy (>=1.4)", "pretend", "pytest (>=6.0)", "pytest-asyncio (>=0.17)", "rich", "simplejson", "twisted"]
+docs = ["cogapp", "furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-mermaid", "sphinxext-opengraph", "twisted"]
+tests = ["freezegun (>=0.2.8)", "pretend", "pytest (>=6.0)", "pytest-asyncio (>=0.17)", "simplejson"]
+typing = ["mypy (>=1.4)", "rich", "twisted"]
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.2"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "97983a4b8fc56f22418a716371ab7a86ea94fd9e1539b865c90ccefb7e1e033d"
+content-hash = "9f5d1d782cb84fd42970199d94adc798ef4b6f6e98ba3cd96d6692532fb8ded2"

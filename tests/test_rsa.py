@@ -16,6 +16,7 @@ from Crypto.Hash import (
     SHA384,
     SHA512,
 )
+from .build import build
 
 RSA_VERIFY_PKCS_15_FIPS_TESTVECTORS_PATH = (
     "./tests/FIPS 186-4 RSA Test Vectors/SigVer15_186-3.rsp"
@@ -90,6 +91,9 @@ def assert_pkcs1_v15_verify_tv(tv: RSAVerifyTestVector):
 
 
 def test_all():
+    # Test that it compiles
+    build("./tests", "tester_contract")
+    # Test that operators are accurate
     test_vectors = get_rsa_verify_test_vectors(RSA_VERIFY_PKCS_15_FIPS_TESTVECTORS_PATH)
     for tv in test_vectors:
         assert (
