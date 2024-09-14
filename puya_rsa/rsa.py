@@ -36,7 +36,7 @@ def pkcs1_v15_verify(
     n: Bytes,
     e: Bytes,
     barrett_reduction_factor: Bytes,
-) -> Bytes:
+) -> None:
     k: UInt64 = n.length
     assert s.length == k, "signature must have the same length as the modulus"
     m: Bytes = _RSAVP1(s, n, e, barrett_reduction_factor)
