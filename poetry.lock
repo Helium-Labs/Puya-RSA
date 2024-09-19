@@ -455,13 +455,13 @@ files = [
 
 [[package]]
 name = "platformdirs"
-version = "4.3.3"
+version = "4.3.6"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "platformdirs-4.3.3-py3-none-any.whl", hash = "sha256:50a5450e2e84f44539718293cbb1da0a0885c9d14adf21b77bae4e66fc99d9b5"},
-    {file = "platformdirs-4.3.3.tar.gz", hash = "sha256:d4e0b7d8ec176b341fb03cb11ca12d0276faa8c485f9cd218f613840463fc2c0"},
+    {file = "platformdirs-4.3.6-py3-none-any.whl", hash = "sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb"},
+    {file = "platformdirs-4.3.6.tar.gz", hash = "sha256:357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"},
 ]
 
 [package.extras]
@@ -486,13 +486,13 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "puya-bignumber"
-version = "0.3.8"
+version = "0.3.9"
 description = "Math Library for big numbers in Puya for Algorand"
 optional = false
 python-versions = "<4.0,>=3.12"
 files = [
-    {file = "puya_bignumber-0.3.8-py3-none-any.whl", hash = "sha256:8c06e14ccd62fd587c1888ecf9029fa881521810f1395394804a6af2016bb8ff"},
-    {file = "puya_bignumber-0.3.8.tar.gz", hash = "sha256:0ae3ee9ba288ef3ab2b2c9ae502756d51eb0305df7a64fdc9554a29c11db6501"},
+    {file = "puya_bignumber-0.3.9-py3-none-any.whl", hash = "sha256:04249993a5f2c81554a93217dfc923d8d955c1e35f5332fb8677efa5f83693f6"},
+    {file = "puya_bignumber-0.3.9.tar.gz", hash = "sha256:ec820a966f4e1b92bbc4a40c895c598b96afe3e34c71e1e2713a3d4c44164c92"},
 ]
 
 [package.dependencies]
@@ -719,4 +719,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "9f5d1d782cb84fd42970199d94adc798ef4b6f6e98ba3cd96d6692532fb8ded2"
+content-hash = "d687df113c86db86d5b78ef9c8e946a17979ef2c4c48bfe70bc00e2512e5a427"

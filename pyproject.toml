@@ -12,7 +12,7 @@ packages = [{include = "puya_rsa"}, {include = "puya_rsa/py.typed"}]
 python = "^3.12"
 py-algorand-sdk = "^2.6.1"
 algorand-python = "^2.0.1"
-puya-bignumber = "0.3.8"
+puya-bignumber = "0.3.9"
 puyapy = "^3.1.0"
 
 [tool.poetry.group.test.dependencies]
