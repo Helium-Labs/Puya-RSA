@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "puya-rsa"
-version = "0.2.1"
+version = "0.2.2"
 description = "Algorand Puya RSA Signature Verification: RFC8017 RSASSA-PKCS1-V1.5-VERIFY function implementation"
 authors = ["Winton Nathan-Roberts <winton.nathan.roberts@gmail.com>"]
 readme = "README.md"
