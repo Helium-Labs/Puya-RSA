@@ -1,5 +1,5 @@
 from algopy import Bytes
-from puya_rsa import pkcs1_v15_verify
+from puya_rsa import pkcs1_v15_verify, pkcs1_v15_verify_without_barrett_validation
 from .util import (
     RSAVerifyTestVector,
     get_rsa_verify_test_vectors,
@@ -90,6 +90,24 @@ def assert_pkcs1_v15_verify_tv(tv: RSAVerifyTestVector):
         return False
 
 
+def assert_pkcs1_v15_verify_without_barrett_validation_tv(tv: RSAVerifyTestVector):
+    msg_digest_info = get_msg_digest_info(tv)
+    precomputed_barrett_factor: bytes = get_barrett_precomputed_factor(tv.mod)
+
+    try:
+        pkcs1_v15_verify_without_barrett_validation(
+            Bytes(msg_digest_info),
+            Bytes(tv.sig),
+            Bytes(tv.mod),
+            Bytes(tv.exp),
+            Bytes(precomputed_barrett_factor),
+        )
+        assert tv.is_valid_sig == True, "TV must be a valid sig"
+    except Exception as e:
+        assert tv.is_valid_sig == False, f"TV must be an invalid sig:\n{e}"
+        return False
+
+
 def test_all():
     # Test that it compiles
     build("./tests", "tester_contract")
@@ -101,3 +119,4 @@ def test_all():
         ), "Pycryptodome Verify should correctly verify"
 
         assert_pkcs1_v15_verify_tv(tv)
+        assert_pkcs1_v15_verify_without_barrett_validation_tv(tv)
